@@ -17,7 +17,6 @@ import numpy as np
 import collections
 
 def agg_order_book (bids, asks):
-            
     group_bid = (bids.groupby('price').sum()).reset_index()
     group_bid = group_bid.sort_values('price', ascending=False)
 
