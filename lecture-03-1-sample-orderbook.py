@@ -11,7 +11,7 @@ while(1):
     book = response.json()
 
     data = book['data']
-
+    
     #print (data)
     
     bids = (pd.DataFrame(data['bids'])).apply(pd.to_numeric,errors='ignore')
