@@ -5,7 +5,7 @@ import datetime
 
 while(1):
     
-   
+
 
     book = {}
     response = requests.get ('https://api.bithumb.com/public/orderbook/BTC_KRW/?count=5')
