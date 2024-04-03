@@ -7,7 +7,7 @@ def bithumb_init_api():
     api = XCoinAPI(api_key, api_secret);
     
     return api
-
+    
 def bithumb_balance(api, cur):
     
     rgParams = {'currency': cur}
