@@ -28,8 +28,7 @@ while(1):
     print ("\n")
     print (asks)
 
-    time.sleep(4.9)
-    continue;
+    #continue;
 
     df = bids.append(asks)
     
@@ -43,6 +42,8 @@ while(1):
     #print ("\n")
     
     df.to_csv("./2024-04-14-bithumb-orderbook.csv", index=False, header=False, mode = 'a')
+    time.sleep(4.9)
+
 
     #should_write_header = os.path.exists(fn)
     #if should_write_header == False:
