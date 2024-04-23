@@ -6,7 +6,7 @@ import datetime
 while(1):
 
 
-    headers = '{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
     
     book = {}
     response = requests.get ('https://api.bithumb.com/public/orderbook/BTC_KRW/?count=5',headers = headers)
