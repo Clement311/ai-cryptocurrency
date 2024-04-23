@@ -24,9 +24,9 @@ while(1):
     asks.sort_values('price', ascending=True, inplace=True)
     asks['type'] = 1 
 
-    print (bids)
-    print ("\n")
-    print (asks)
+    #print (bids)
+    #print ("\n")
+    #print (asks)
 
     #continue;
 
