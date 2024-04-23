@@ -2,12 +2,13 @@ import time
 import requests
 import pandas as pd
 import datetime
+import os
 
-while(1):
+current_date = datetime.datetime.now().date()
+file_name = f"./{current_date}-bithumb-btc.csv"
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
 
-
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
-    
+while(1):    
     book = {}
     response = requests.get ('https://api.bithumb.com/public/orderbook/BTC_KRW/?count=5',headers = headers)
     book = response.json()
@@ -40,8 +41,12 @@ while(1):
     
     print (df)
     print ("\n")
+
+    if current_date !=datetime.datetime.now().date():
+        current_date = datetime.datetime.now().date()
+        file_name =f"./{current_date}-bithumb-btc.csv"
     
-    df.to_csv("./2024-04-14-bithumb-orderbook.csv", index=False, header=False, mode = 'a')
+    df.to_csv(file_name, index=False, header=False, mode = 'a')
     time.sleep(4.9)
 
 
