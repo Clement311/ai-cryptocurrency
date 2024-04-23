@@ -38,8 +38,8 @@ while(1):
     df['quantity'] = df['quantity'].round(decimals=4)
     df['timestamp'] = req_timestamp
     
-    #print (df)
-    #print ("\n")
+    print (df)
+    print ("\n")
     
     df.to_csv("./2024-04-14-bithumb-orderbook.csv", index=False, header=False, mode = 'a')
     time.sleep(4.9)
