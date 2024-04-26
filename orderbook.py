@@ -25,12 +25,6 @@ while(1):
     asks.sort_values('price', ascending=True, inplace=True)
     asks['type'] = 1 
 
-    #print (bids)
-    #print ("\n")
-    #print (asks)
-
-    #continue;
-
     df = bids.append(asks)
     
     timestamp = datetime.datetime.now()
@@ -48,12 +42,3 @@ while(1):
     
     df.to_csv(file_name, index=False, header=False, mode = 'a')
     time.sleep(4.9)
-
-
-    #should_write_header = os.path.exists(fn)
-    #if should_write_header == False:
-    #    df.to_csv(fn, index=False, header=True, mode = 'a')
-    #else:
-    #    df.to_csv(fn, index=False, header=False, mode = 'a')
-
-    #time.sleep(4.9)
