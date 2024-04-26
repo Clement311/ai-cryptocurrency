@@ -5,7 +5,7 @@ import datetime
 import os
 
 current_date = datetime.datetime.now().date()
-file_name = f"./{current_date}-bithumb-btc.csv"
+file_name = f"./book-{current_date}-bithumb-btc.csv"
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
 
 while(1):    
@@ -44,7 +44,7 @@ while(1):
 
     if current_date !=datetime.datetime.now().date():
         current_date = datetime.datetime.now().date()
-        file_name =f"./{current_date}-bithumb-btc.csv"
+        file_name =f"./book-{current_date}-bithumb-btc.csv"
     
     df.to_csv(file_name, index=False, header=False, mode = 'a')
     time.sleep(4.9)
